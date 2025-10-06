@@ -15,7 +15,7 @@ export default function Home() {
         "Static tripod-based shots",
         "Full HD export",
       ],
-      link: "https://forms.gle/basic-package-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Basic+VFX+Single",
     },
     {
       title: "Advanced VFX Package",
@@ -26,7 +26,7 @@ export default function Home() {
         "Particle / Cloth simulations",
         "Dynamic lighting & color grading",
       ],
-      link: "https://forms.gle/advanced-package-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Advanced+VFX+Single",
     },
     {
       title: "Premium VFX Package",
@@ -36,8 +36,10 @@ export default function Home() {
         "Model/subject interaction",
         "Cinematic lighting & motion path",
         "Optional branded props",
+        "Priority production & delivery",
+        "Unlimited minor revisions",
       ],
-      link: "https://forms.gle/premium-package-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Premium+VFX+Single",
     },
   ];
 
@@ -51,7 +53,7 @@ export default function Home() {
         "Consistent visuals & brand tone",
         "25% discount vs single purchase",
       ],
-      link: "https://forms.gle/basic-retainer-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Basic+VFX+Retainer",
     },
     {
       title: "Advanced VFX Retainer",
@@ -62,7 +64,7 @@ export default function Home() {
         "Full simulations & dynamic motion",
         "25% discount vs single purchase",
       ],
-      link: "https://forms.gle/advanced-retainer-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Advanced+VFX+Retainer",
     },
     {
       title: "Premium VFX Retainer",
@@ -78,7 +80,7 @@ export default function Home() {
         "Dedicated creative consultation",
         "Social media optimization",
       ],
-      link: "https://forms.gle/premium-retainer-form",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Premium+VFX+Retainer",
     },
   ];
 
