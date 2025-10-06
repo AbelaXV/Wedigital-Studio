@@ -1,0 +1,184 @@
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+
+export default function Home() {
+  const [showRetainer, setShowRetainer] = useState(false);
+
+  const singlePackages = [
+    {
+      title: "Basic VFX Package",
+      price: "10K–15K birr",
+      delivery: "3–5 Days",
+      features: [
+        "Basic visual effects & color correction",
+        "Static tripod-based shots",
+        "Full HD export",
+      ],
+      link: "https://forms.gle/basic-package-form",
+    },
+    {
+      title: "Advanced VFX Package",
+      price: "15K–20K birr",
+      delivery: "3–5 Days",
+      features: [
+        "Camera movement & transitions",
+        "Particle / Cloth simulations",
+        "Dynamic lighting & color grading",
+      ],
+      link: "https://forms.gle/advanced-package-form",
+    },
+    {
+      title: "Premium VFX Package",
+      price: "20K–30K birr",
+      delivery: "4–7 Days",
+      features: [
+        "Model/subject interaction",
+        "Cinematic lighting & motion path",
+        "Optional branded props",
+      ],
+      link: "https://forms.gle/premium-package-form",
+    },
+  ];
+
+  const retainerPackages = [
+    {
+      title: "Basic VFX Retainer",
+      price: "37K birr / month",
+      delivery: "4 videos / month",
+      features: [
+        "4 Basic videos monthly",
+        "Consistent visuals & brand tone",
+        "25% discount vs single purchase",
+      ],
+      link: "https://forms.gle/basic-retainer-form",
+    },
+    {
+      title: "Advanced VFX Retainer",
+      price: "50K birr / month",
+      delivery: "4 videos / month",
+      features: [
+        "4 Advanced videos monthly",
+        "Full simulations & dynamic motion",
+        "25% discount vs single purchase",
+      ],
+      link: "https://forms.gle/advanced-retainer-form",
+    },
+    {
+      title: "Premium VFX Retainer",
+      price: "75K birr / month",
+      delivery: "6 videos / month",
+      features: [
+        "6 Premium videos per month",
+        "4K Ultra HD / Cinematic Quality",
+        "Models & storytelling",
+        "Unlimited minor revisions",
+        "Priority production & delivery",
+        "Custom branded assets & props",
+        "Dedicated creative consultation",
+        "Social media optimization",
+      ],
+      link: "https://forms.gle/premium-retainer-form",
+    },
+  ];
+
+  const packages = showRetainer ? retainerPackages : singlePackages;
+
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center px-6 pb-16">
+      {/* === NAVBAR === */}
+      <nav className="w-full flex justify-between items-center py-4 px-6 md:px-16 bg-black/30 backdrop-blur-md fixed top-0 z-50 border-b border-gray-800 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
+        {/* Centered logo */}
+        <div className="flex-1 flex justify-center">
+          <img
+            src="/logo.png"
+            alt="Wedegital Logo"
+            className="w-40 md:w-48 hover:opacity-90 transition-transform hover:scale-105"
+          />
+        </div>
+
+        {/* Nav links on the right */}
+        <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
+          <Link href="/" className="hover:text-yellow-400 transition">
+            Home
+          </Link>
+          <Link href="/portfolio" className="hover:text-yellow-400 transition">
+            Portfolio
+          </Link>
+          <Link href="/contact" className="hover:text-yellow-400 transition">
+            Contact
+          </Link>
+        </div>
+      </nav>
+
+      {/* === PAGE CONTENT === */}
+      <div className="pt-48 w-full flex flex-col items-center">
+        {/* Toggle Button */}
+        <div className="flex items-center gap-4 mb-12 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-gray-800 shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+          <span
+            className={`text-sm font-medium cursor-pointer ${
+              !showRetainer ? "text-yellow-400" : "text-gray-400"
+            }`}
+            onClick={() => setShowRetainer(false)}
+          >
+            Single Packages
+          </span>
+          <div
+            onClick={() => setShowRetainer(!showRetainer)}
+            className="w-12 h-6 bg-gray-700 rounded-full relative cursor-pointer"
+          >
+            <div
+              className={`absolute top-1 left-1 w-4 h-4 rounded-full transition-all ${
+                showRetainer ? "translate-x-6 bg-yellow-400" : "bg-gray-400"
+              }`}
+            ></div>
+          </div>
+          <span
+            className={`text-sm font-medium cursor-pointer ${
+              showRetainer ? "text-yellow-400" : "text-gray-400"
+            }`}
+            onClick={() => setShowRetainer(true)}
+          >
+            Retainer Packages
+          </span>
+        </div>
+
+        {/* Package Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl">
+          {packages.map((pkg, index) => (
+            <div
+              key={index}
+              className="relative bg-black/60 border border-gray-800 rounded-2xl p-8 hover:border-yellow-400/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.25)] transition duration-300"
+            >
+              {/* Gold Glow Top Border */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 rounded-t-2xl opacity-70" />
+
+              <h2 className="text-xl font-semibold mb-3">{pkg.title}</h2>
+              <p className="text-lg font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+                {pkg.price}
+              </p>
+              <p className="text-sm text-gray-400 mb-6">{pkg.delivery}</p>
+
+              <ul className="text-gray-300 text-sm space-y-2 mb-8">
+                {pkg.features.map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-yellow-400 mr-2">•</span> {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={pkg.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center py-3 rounded-full border border-yellow-500 text-yellow-300 font-semibold hover:bg-yellow-500 hover:text-black transition"
+              >
+                Subscribe Now
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
