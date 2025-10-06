@@ -102,7 +102,7 @@ export default function Home() {
         {/* Nav links */}
         <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-yellow-400 transition">
-            Home
+            Package
           </Link>
           <Link href="/portfolio" className="hover:text-yellow-400 transition">
             Portfolio
