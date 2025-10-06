@@ -42,7 +42,7 @@ export default function PortfolioPage() {
         {/* Navigation Right */}
         <nav className="flex gap-6 text-sm font-medium text-gray-400">
           <a href="/" className="hover:text-yellow-400 transition">
-            Home
+            Package
           </a>
           <a href="/portfolio" className="text-yellow-400 font-semibold">
             Portfolio
