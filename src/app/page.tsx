@@ -90,8 +90,8 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center px-6 pb-16">
       {/* === NAVBAR === */}
       <nav className="w-full flex justify-between items-center py-4 px-6 md:px-16 bg-black/30 backdrop-blur-md fixed top-0 z-50 border-b border-gray-800 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
-        {/* Centered logo */}
-        <div className="flex-1 flex justify-center">
+        {/* Logo (left on mobile, center on tablet/desktop) */}
+        <div className="flex-1 flex justify-start md:justify-center">
           <img
             src="/logo.png"
             alt="Wedegital Logo"
@@ -99,7 +99,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Nav links on the right */}
+        {/* Nav links */}
         <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-yellow-400 transition">
             Home
