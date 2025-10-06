@@ -88,7 +88,7 @@ export default function Home() {
     {
       title: "Premium VFX Retainer",
       price: "75K birr / month",
-      delivery: "6 videos / month",
+      delivery: "4 videos / month",
       features: [
       "4 Premium videos per month",
       "All features in Advanced",
