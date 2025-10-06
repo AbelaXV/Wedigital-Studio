@@ -23,7 +23,7 @@ export default function Home() {
       features: [
         "Basic visual effects & color correction",
         "Static tripod-based shots",
-        "Full HD export",
+        "Full HD Render",
         "Simple motion graphics",
         "Basic sound design",
         "1 minor revision",
@@ -40,7 +40,7 @@ export default function Home() {
         "Camera movement & transitions",
         "Particle / Cloth simulations",
         "Dynamic lighting & color grading",
-        "4K Render Available",
+        "4K/HD Render Quality",
         "2 minor revision",
         "Best for growing brands & marketing campaigns",
       ],
