@@ -11,13 +11,12 @@ export default function Home() {
       price: "10K–15K birr",
       delivery: "3–5 Days",
       features: [
-       "Basic visual effects & color correction",
+        "Basic visual effects & color correction",
         "Static tripod-based shots",
         "Full HD export",
         "Simple motion graphics",
         "Basic sound design",
         "1 minor revision",
-
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Basic+VFX+Single",
     },
@@ -26,13 +25,12 @@ export default function Home() {
       price: "15K–20K birr",
       delivery: "3–5 Days",
       features: [
-      "All features in Basic",
-      "Camera movement & transitions",
-      "Particle / Cloth simulations",
-      "Dynamic lighting & color grading",
-      "4K Render Available",
-      "2 minor revision",
-
+        "All features in Basic",
+        "Camera movement & transitions",
+        "Particle / Cloth simulations",
+        "Dynamic lighting & color grading",
+        "4K Render Available",
+        "2 minor revision",
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Advanced+VFX+Single",
     },
@@ -47,7 +45,6 @@ export default function Home() {
         "Optional branded props",
         "Priority production & delivery",
         "Unlimited minor revisions",
-
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Premium+VFX+Single",
     },
@@ -59,12 +56,12 @@ export default function Home() {
       price: "37K birr / month",
       delivery: "4 videos / month",
       features: [
-       "4 Basic videos monthly",
-      "Basic VFX & color correction",
-      "Static tripod shots, Full HD",
-      "Simple motion graphics & SFX",
-      "1 minor revision",
-      "20% discount vs single purchase",
+        "4 Basic videos monthly",
+        "Basic VFX & color correction",
+        "Static tripod shots, Full HD",
+        "Simple motion graphics & SFX",
+        "1 minor revision",
+        "20% discount vs single purchase",
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Basic+VFX+Retainer",
     },
@@ -73,32 +70,33 @@ export default function Home() {
       price: "50K birr / month",
       delivery: "4 videos / month",
       features: [
-       "4 Advanced videos monthly",
-       "All features in Basic",
-      "Camera movement & transitions",
-      "Particle / Cloth simulations",
-      "Dynamic lighting & color grading",
-      "4K render Quality", 
-      "Advanced motion graphics & SFX", 
-      "2 minor revision", 
-      "30% discount vs single purchase",
+        "4 Advanced videos monthly",
+        "All features in Basic",
+        "Camera movement & transitions",
+        "Particle / Cloth simulations",
+        "Dynamic lighting & color grading",
+        "4K render Quality",
+        "Advanced motion graphics & SFX",
+        "2 minor revision",
+        "30% discount vs single purchase",
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Advanced+VFX+Retainer",
+      badge: "Best Deal",
     },
     {
       title: "Premium VFX Retainer",
       price: "75K birr / month",
       delivery: "4 videos / month",
       features: [
-      "4 Premium videos per month",
-      "All features in Advanced",
-      "4K Ultra HD / Cinematic Quality",
-      "Models & storytelling",
-      "Custom branded assets & props",
-      "Priority production & delivery",
-      "Premium motion graphics & SFX",
-      "Unlimited minor revisions",
-      "25% discount vs single purchase",
+        "4 Premium videos per month",
+        "All features in Advanced",
+        "4K Ultra HD / Cinematic Quality",
+        "Models & storytelling",
+        "Custom branded assets & props",
+        "Priority production & delivery",
+        "Premium motion graphics & SFX",
+        "Unlimited minor revisions",
+        "25% discount vs single purchase",
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Premium+VFX+Retainer",
     },
@@ -110,7 +108,6 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center px-6 pb-16">
       {/* === NAVBAR === */}
       <nav className="w-full flex justify-between items-center py-4 px-6 md:px-16 bg-black/30 backdrop-blur-md fixed top-0 z-50 border-b border-gray-800 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
-        {/* Logo (left on mobile, center on tablet/desktop) */}
         <div className="flex-1 flex justify-start md:justify-center">
           <img
             src="/logo.png"
@@ -119,12 +116,11 @@ export default function Home() {
           />
         </div>
 
-        {/* Nav links */}
         <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
           <Link href="/portfolio" className="hover:text-yellow-400 transition">
             Portfolio
           </Link>
-           <Link href="/contact" className="hover:text-yellow-400 transition">
+          <Link href="/contact" className="hover:text-yellow-400 transition">
             Contact
           </Link>
         </div>
@@ -164,38 +160,57 @@ export default function Home() {
 
         {/* Package Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className="relative bg-black/60 border border-gray-800 rounded-2xl p-8 hover:border-yellow-400/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.25)] transition duration-300"
-            >
-              {/* Gold Glow Top Border */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 rounded-t-2xl opacity-70" />
-
-              <h2 className="text-xl font-semibold mb-3">{pkg.title}</h2>
-              <p className="text-lg font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
-                {pkg.price}
-              </p>
-              <p className="text-sm text-gray-400 mb-6">{pkg.delivery}</p>
-
-              <ul className="text-gray-300 text-sm space-y-2 mb-8">
-                {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="text-yellow-400 mr-2">•</span> {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={pkg.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center py-3 rounded-full border border-yellow-500 text-yellow-300 font-semibold hover:bg-yellow-500 hover:text-black transition"
+          {packages.map((pkg, index) => {
+            const isBestDeal = pkg.badge === "Best Deal";
+            return (
+              <div
+                key={index}
+                className={`relative bg-black/60 border rounded-2xl p-8 transition duration-300 ${
+                  isBestDeal
+                    ? "border-yellow-500 shadow-[0_0_35px_rgba(255,215,0,0.35)] scale-[1.03]"
+                    : "border-gray-800 hover:border-yellow-400/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
+                }`}
               >
-                Subscribe Now
-              </a>
-            </div>
-          ))}
+                {/* Gold Glow Top Border */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 rounded-t-2xl opacity-70 z-0" />
+
+                {/* Best Deal Badge */}
+                {pkg.badge && (
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg z-10">
+                    {pkg.badge}
+                  </div>
+                )}
+
+                <h2 className="text-xl font-semibold mb-3">{pkg.title}</h2>
+                <p className="text-lg font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+                  {pkg.price}
+                </p>
+                <p className="text-sm text-gray-400 mb-6">{pkg.delivery}</p>
+
+                <ul className="text-gray-300 text-sm space-y-2 mb-8">
+                  {pkg.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-yellow-400 mr-2">•</span> {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={pkg.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full text-center py-3 rounded-full font-semibold transition-all duration-200
+                    ${
+                      isBestDeal
+                        ? "bg-yellow-500 text-black border border-yellow-500 hover:bg-yellow-400 hover:text-black"
+                        : "border border-yellow-500 text-yellow-300 hover:bg-yellow-500 hover:text-black"
+                    }`}
+                >
+                  Subscribe Now
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
