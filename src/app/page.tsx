@@ -107,9 +107,6 @@ export default function Home() {
           <Link href="/portfolio" className="hover:text-yellow-400 transition">
             Portfolio
           </Link>
-          <Link href="/contact" className="hover:text-yellow-400 transition">
-            Contact
-          </Link>
         </div>
       </nav>
 
