@@ -71,14 +71,14 @@ export default function Home() {
       price: "75K birr / month",
       delivery: "6 videos / month",
       features: [
-        "6 Premium videos per month",
+        "4 Premium videos per month",
         "4K Ultra HD / Cinematic Quality",
         "Models & storytelling",
         "Unlimited minor revisions",
         "Priority production & delivery",
         "Custom branded assets & props",
-        "Dedicated creative consultation",
         "Social media optimization",
+        "25% discount vs single purchase"
       ],
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Premium+VFX+Retainer",
     },
@@ -138,7 +138,7 @@ export default function Home() {
             }`}
             onClick={() => setShowRetainer(true)}
           >
-            Retainer Packages
+            Retainer Packages (25–30% Off)
           </span>
         </div>
 
