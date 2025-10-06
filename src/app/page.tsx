@@ -101,11 +101,11 @@ export default function Home() {
 
         {/* Nav links */}
         <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-yellow-400 transition">
-            Package
-          </Link>
           <Link href="/portfolio" className="hover:text-yellow-400 transition">
             Portfolio
+          </Link>
+           <Link href="/contact" className="hover:text-yellow-400 transition">
+            Contact
           </Link>
         </div>
       </nav>
