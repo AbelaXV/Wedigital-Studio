@@ -2,10 +2,20 @@
 import { useState } from "react";
 import Link from "next/link";
 
+// ✅ Define package type (fixes TypeScript error)
+type PackageType = {
+  title: string;
+  price: string;
+  delivery: string;
+  features: string[];
+  link: string;
+  badge?: string; // optional
+};
+
 export default function Home() {
   const [showRetainer, setShowRetainer] = useState(false);
 
-  const singlePackages = [
+  const singlePackages: PackageType[] = [
     {
       title: "Basic VFX Package",
       price: "10K–15K birr",
@@ -50,7 +60,7 @@ export default function Home() {
     },
   ];
 
-  const retainerPackages = [
+  const retainerPackages: PackageType[] = [
     {
       title: "Basic VFX Retainer",
       price: "37K birr / month",
@@ -80,8 +90,8 @@ export default function Home() {
         "2 minor revision",
         "30% discount vs single purchase",
       ],
+      badge: "Best Deal", // ✅ This one gets the badge
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdNjF__Avi9aIOXhXTBl68pTkMkjguCfC1Ps4Ki6vFLcnGe6Q/viewform?usp=pp_url&entry.1600566181=Advanced+VFX+Retainer",
-      badge: "Best Deal",
     },
     {
       title: "Premium VFX Retainer",
@@ -108,6 +118,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center px-6 pb-16">
       {/* === NAVBAR === */}
       <nav className="w-full flex justify-between items-center py-4 px-6 md:px-16 bg-black/30 backdrop-blur-md fixed top-0 z-50 border-b border-gray-800 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
+        {/* Logo */}
         <div className="flex-1 flex justify-start md:justify-center">
           <img
             src="/logo.png"
@@ -116,6 +127,7 @@ export default function Home() {
           />
         </div>
 
+        {/* Nav links */}
         <div className="absolute right-8 flex items-center gap-8 text-sm font-medium">
           <Link href="/portfolio" className="hover:text-yellow-400 transition">
             Portfolio
@@ -167,17 +179,17 @@ export default function Home() {
                 key={index}
                 className={`relative bg-black/60 border rounded-2xl p-8 transition duration-300 ${
                   isBestDeal
-                    ? "border-yellow-500 shadow-[0_0_35px_rgba(255,215,0,0.35)] scale-[1.03]"
+                    ? "border-yellow-500 shadow-[0_0_40px_rgba(255,215,0,0.4)]"
                     : "border-gray-800 hover:border-yellow-400/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
                 }`}
               >
                 {/* Gold Glow Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 rounded-t-2xl opacity-70 z-0" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 rounded-t-2xl opacity-70" />
 
                 {/* Best Deal Badge */}
-                {pkg.badge && (
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg z-10">
-                    {pkg.badge}
+                {isBestDeal && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-xs font-bold px-4 py-1 rounded-full shadow-[0_0_15px_rgba(255,215,0,0.6)] animate-pulse">
+                    ⭐ Best Deal
                   </div>
                 )}
 
@@ -199,12 +211,11 @@ export default function Home() {
                   href={pkg.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block w-full text-center py-3 rounded-full font-semibold transition-all duration-200
-                    ${
-                      isBestDeal
-                        ? "bg-yellow-500 text-black border border-yellow-500 hover:bg-yellow-400 hover:text-black"
-                        : "border border-yellow-500 text-yellow-300 hover:bg-yellow-500 hover:text-black"
-                    }`}
+                  className={`block w-full text-center py-3 rounded-full font-semibold transition ${
+                    isBestDeal
+                      ? "border-yellow-500 bg-yellow-500 text-black hover:bg-yellow-400"
+                      : "border-yellow-500 text-yellow-300 hover:bg-yellow-500 hover:text-black"
+                  }`}
                 >
                   Subscribe Now
                 </a>
