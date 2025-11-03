@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           {/* Telegram */}
           <a
-            href="https://t.me/abelaxv" // 🔗 Replace with your actual Telegram link
+            href="https://t.me/wedigitalstudio" // 🔗 Replace with your actual Telegram link
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center w-56 py-3 rounded-full border border-yellow-400/50 hover:border-yellow-300 hover:bg-yellow-400/10 transition duration-300"
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/251974146784" // 🔗 Replace with your full WhatsApp number (no +)
+            href="https://wa.me/251934432961" // 🔗 Replace with your full WhatsApp number (no +)
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center w-56 py-3 rounded-full border border-green-500/50 hover:border-green-400 hover:bg-green-500/10 transition duration-300"
